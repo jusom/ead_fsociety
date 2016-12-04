@@ -19,6 +19,7 @@
 define('ROOT_PATH', __DIR__);
 define('DS', DIRECTORY_SEPARATOR);
 define('UP_PATH', ROOT_PATH . DS . 'conteudo'. DS . 'uploads');
+define('CONTROL_PATH', ROOT_PATH . DS . 'Classes' . DS . 'Controle');
 /*
  * configurações da base de dados
  * @const DB_NAME nome da sua base de dados
