@@ -16,7 +16,7 @@
     Linux:  /
     MAC:    /
  */
-define('ROOT_PATH', dirname(__FILE__));
+define('ROOT_PATH', __DIR__);
 define('DS', DIRECTORY_SEPARATOR);
 define('UP_PATH', ROOT_PATH . DS . 'conteudo'. DS . 'uploads');
 /*

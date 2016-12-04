@@ -14,16 +14,16 @@ require_once ROOT_PATH . DS . 'funcoes.php';
  * que estão guardados na pasta classes
  */
 
-function __autoload($classe) {
-    
-    $classe = ROOT_PATH.DS . str_replace('\\', DS, $classe) . '.php';
-
-    if (!file_exists($classe)) {
-        throw new Exception("Erro ao carregar a classe '{$classe}'");
+function carregarClasses($classe){
+    $classe_path = ROOT_PATH.DS . str_replace('\\', DS, $classe) . '.php';
+    if(!$classe_path){
+        throw new Exception("Erro ao carregar a Classe '{$classe}'");
     }
-
-    require_once($classe);
+    require_once $classe_path;
 }
+
+/* REGISTRADOR DE AUTOLOADERS */
+spl_autoload_register('carregarClasses');
 
 /*
  * MODO DE DEBUG
