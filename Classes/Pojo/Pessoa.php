@@ -4,15 +4,14 @@ namespace Classes\Pojo;
 
 class Pessoa {
 
-    protected $id;
-    protected $nome;
-    protected $sobrenome;
-    protected $username;
-    protected $email;
-    protected $senha;
-    protected $data_nascimento;
-    protected $foto;
-    protected $status;
+    private $id;
+    private $nome;
+    private $sobrenome;
+    private $username;
+    private $email;
+    private $senha;
+    private $data_nascimento;
+    private $status;
 
     public function getId() {
         return $this->id;
@@ -76,16 +75,6 @@ class Pessoa {
         $this->data_nascimento = $data_nascimento;
         return $this;
     }
-
-    public function getFoto() {
-        return $this->foto;
-    }
-
-    public function setFoto($foto) {
-        $this->foto = $foto;
-        return $this;
-    }
-
     public function getStatus() {
         return $this->status;
     }

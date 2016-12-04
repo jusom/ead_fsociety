@@ -2,14 +2,14 @@
 
 namespace Classes\Pojo;
 
-class Curso {
+
+class Atividade {
     private $id;
     private $titulo;
     private $descricao;
-    private $duracao;
-    private $valor;
-    private $categoria;
-    private $tags;
+    private $imagem;
+    private $questoes = [];
+    private $nota_minima;
     private $url;
     
     public function getId() {
@@ -24,20 +24,16 @@ class Curso {
         return $this->descricao;
     }
 
-    public function getDuracao() {
-        return $this->duracao;
+    public function getImagem() {
+        return $this->imagem;
     }
 
-    public function getValor() {
-        return $this->valor;
+    public function getQuestoes() {
+        return $this->questoes;
     }
 
-    public function getCategoria() {
-        return $this->categoria;
-    }
-
-    public function getTags() {
-        return $this->tags;
+    public function getNota_minima() {
+        return $this->nota_minima;
     }
 
     public function setId($id) {
@@ -55,25 +51,21 @@ class Curso {
         return $this;
     }
 
-    public function setDuracao($duracao) {
-        $this->duracao = $duracao;
+    public function setImagem($imagem) {
+        $this->imagem = $imagem;
         return $this;
     }
 
-    public function setValor($valor) {
-        $this->valor = $valor;
+    public function setQuestoes($questoes) {
+        $this->questoes = $questoes;
         return $this;
     }
 
-    public function setCategoria($categoria) {
-        $this->categoria = $categoria;
+    public function setNota_minima($nota_minima) {
+        $this->nota_minima = $nota_minima;
         return $this;
     }
 
-    public function setTags($tags) {
-        $this->tags = $tags;
-        return $this;
-    }
     public function getUrl() {
         return $this->url;
     }
@@ -82,6 +74,5 @@ class Curso {
         $this->url = $url;
         return $this;
     }
-
 
 }
