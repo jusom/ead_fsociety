@@ -13,12 +13,15 @@ require_once ROOT_PATH . DS . 'funcoes.php';
  * é a função responsável por carregar automaticamente todos os arquivos
  * que estão guardados na pasta classes
  */
+use includes\Erro404;
 
 function carregarClasses($classe){
     $classe_path = ROOT_PATH.DS . str_replace('\\', DS, $classe) . '.php';
-    if(!$classe_path){
-        throw new Exception("Erro ao carregar a Classe '{$classe}'");
+    
+    if(!file_exists($classe_path)){
+        return new Erro404();
     }
+    
     require_once $classe_path;
 }
 
@@ -45,6 +48,4 @@ if (!defined('DEBUG') || DEBUG === false) {
 
 //Inicia a classe principal do sistema
 
-use Classes\Ead;
-
-$ead = new Ead();
+$ead = new Classes\Ead();
