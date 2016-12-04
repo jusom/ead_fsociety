@@ -6,13 +6,11 @@
  * que serão usadas no escopo geral do sistema
  */
 
-function checa_array($index, $chave) {
-    if (isset($index[$chave]) && !empty($index[$chave])) {
+function checa_array($array, $indice) {
+    if (isset($array[$indice]) && !empty($array[$indice])) {
         // Retorna o valor da chave
-        return $index[$chave];
+        return $array[$indice];
     }
     
     return null;
-}
-
-//checa_array
+}//checa_array
