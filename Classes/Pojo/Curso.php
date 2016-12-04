@@ -2,7 +2,6 @@
 
 namespace Classes\Pojo;
 
-
 class Curso {
     private $id;
     private $titulo;

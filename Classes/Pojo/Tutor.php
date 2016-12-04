@@ -2,6 +2,6 @@
 
 namespace Classes\Pojo;
 
-class Aluno extends Pessoa{
-    
+class Tutor extends Pessoa{
+   //
 }

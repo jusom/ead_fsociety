@@ -1,9 +1,9 @@
 <?php
 
-
 namespace Classes\Pojo;
 
 class Pessoa {
+
     protected $id;
     protected $nome;
     protected $sobrenome;
@@ -12,7 +12,8 @@ class Pessoa {
     protected $senha;
     protected $data_nascimento;
     protected $foto;
-    
+    protected $status;
+
     public function getId() {
         return $this->id;
     }
@@ -75,6 +76,7 @@ class Pessoa {
         $this->data_nascimento = $data_nascimento;
         return $this;
     }
+
     public function getFoto() {
         return $this->foto;
     }
@@ -84,5 +86,13 @@ class Pessoa {
         return $this;
     }
 
+    public function getStatus() {
+        return $this->status;
+    }
+
+    public function setStatus($status) {
+        $this->status = $status;
+        return $this;
+    }
 
 }
